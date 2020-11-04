@@ -23,13 +23,13 @@ To run the web app and see the visualizations, navigate to the app directory and
 ### File description:
 "
 
-master.html: main page of web app
-go.html: classification result page of web app
-run.py: flask file that runs app
-disaster_categories.csv: data to process 
-disaster_messages.csv: data to process
-process_data.py: python script that cleans and stores the dataset into a SQL database
-DisasterResponse.db: database with clean data 
+master.html: main page of web app  
+go.html: classification result page of web app  
+run.py: flask file that runs app  
+disaster_categories.csv: data to process   
+disaster_messages.csv: data to process  
+process_data.py: python script that cleans and stores the dataset into a SQL database  
+DisasterResponse.db: database with clean data   
 train_classifier.py: python script that trains and evaluates the machine learning model on the dataset
 
 
