@@ -7,12 +7,11 @@ purpose of this project was to build a system that correctly classifies messages
 
 ### Run:
 
-In a terminal or command window, navigate to the project's root directory. Next, run the following command to clean and store the data into a database
-using the ETL pipeline:
+In a terminal or command window, navigate to the project's root directory. Next, run the following command to clean and store the data into a database named DisasterResponse using the ETL pipeline:
 
 `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
 
-In order to run the Machine Learning pipeline, type the following command:
+In order to run the Machine Learning pipeline and save the trained model in a pickle file with name classifier, type the following command:
 
 `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
