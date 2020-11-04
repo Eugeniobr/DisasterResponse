@@ -21,7 +21,7 @@ To run the web app and see the visualizations, navigate to the app directory and
 `python run.py`
 
 ### File structure and description:
-
+"
 - app
 | - template
 | |- master.html  # main page of web app
@@ -36,7 +36,7 @@ To run the web app and see the visualizations, navigate to the app directory and
 
 - models
 |- train_classifier.py # python script that trains and evaluates the machine learning model on the dataset
-
+"
 
 ### Acknowledgments
 
