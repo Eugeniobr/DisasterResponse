@@ -3,7 +3,7 @@
 ### Project Motivation:
 
 This is the second project of the Udacity Data Scientist Nanodegree. In this project, I have implemented an ETL and a Machine Learning pipeline. The main
-purpose of this project was to build a system that correctly classifies messages.
+purpose of this project was to build a system that identifies relevant messages and correctly classifies them.
 
 ### Run:
 
@@ -41,4 +41,4 @@ train_classifier.py: python script that trains and evaluates the machine learnin
 
 ### Acknowledgments
 
-Templates for the process_data.py and train_classifier.py scripts were provided by Udacity. The dataset was provided by Figure Eight. 
+Templates for the files process_data.py, train_classifier.py, go.html and master.html were provided by Udacity. The dataset was provided by Figure Eight. 
