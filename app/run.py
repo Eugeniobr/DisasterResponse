@@ -43,6 +43,18 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    new_df = df.drop(columns=['id', 'message', 'original' ,'genre'])
+    category_names = new_df.sum().sort_values(ascending=False)[:5].index
+    category_values = new_df.sum().sort_values(ascending=False)[:5].values
+    
+    natural_disasters = ['floods', 'fire', 'storm', 'fire', 'earthquake']
+
+    missing_people = []
+
+    for type_of_disaster in natural_disasters:
+        missing_people.append(new_df[new_df['missing_people'] == 1][type_of_disaster].sum())
+    
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -63,8 +75,59 @@ def index():
                     'title': "Genre"
                 }
             }
-        }
+        },
+    
+        {   
+            'data':[
+                
+                Bar(
+                    x = category_names,
+                    y = category_values
+                ) 
+            ],
+        
+            'layout':{
+                'title': 'Absolute Frequency of the 5 most frequent categories',
+        
+                    'yaxis':{
+                        'title':'Count'
+                    },
+                    
+                    'xaxis':{
+                        'title': 'Category'
+                    }   
+            }
+        },
+        
+        {   
+            'data':[
+                
+                Bar(
+                    x = natural_disasters,
+                    y = missing_people
+                ) 
+            ],
+        
+            'layout':{
+                'title': 'Missing people according to natural disaster',
+        
+                    'yaxis':{
+                        'title':'Count'
+                    },
+                    
+                    'xaxis':{
+                        'title': 'Natural disaster'
+                    }   
+            }              
+            
+        }       
     ]
+    
+    new_df = df.drop(columns=['id', 'message', 'original' ,'genre'])
+    category_names = new_df.sum().sort_values(ascending=False)[:5].index
+    category_values = new_df.sum().sort_values(ascending=False)[:5].values
+    
+    
     
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]

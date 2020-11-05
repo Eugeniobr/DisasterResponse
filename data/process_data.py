@@ -35,7 +35,7 @@ def clean_data(df):
   # select the first row of the categories dataframe
   row = categories.iloc[0]
   #remove the two last characters for each string in row
-  category_colnames = row.apply(lambda x: x[:-3])
+  category_colnames = row.apply(lambda x: x[:-2])
   # rename the columns of `categories`
   categories.columns = category_colnames
   #converts category values to numbers
